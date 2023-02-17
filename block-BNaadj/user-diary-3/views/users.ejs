@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>views form</title>
+  <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="flex">
+      <h1>users</h1>
+      <a class="btn" href="/users/new">add user</a>
+    </div>
+    <h1 class="textalign">User List</h1>
+    <% users.forEach(user=>{ %>
+      <section class="textalign">
+        <a href="/users/<%= user._id %>"> <h1><%= user.name %></h1></a>
+      </section>
+      <% }) %>
+  </div>
+</body>
+
+</html>

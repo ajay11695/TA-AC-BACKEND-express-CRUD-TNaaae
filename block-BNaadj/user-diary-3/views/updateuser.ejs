@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>views user</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <h1 class="textalign">Add User</h1>
+   <div class="container1">
+    <form action="/users/<%= user._id %>" method="POST">
+        <input class="formInput" type="text" name="name" placeholder="Enter name" value="<%= user.name %>">
+        <input class="formInput" type="email" name="email" placeholder="Enter email" value="<%= user.email %>">
+        <input class="formInput" type="number" name="age" placeholder="Enter age"  value="<%= user.age %>">
+        <input class="formInput" type="text" name="address" placeholder="Enter address"  value="<%= user.address %>">
+        <input class="formInput" type="text" name="bio" placeholder="Enter bio"  value="<%= user.bio %>">
+        <input class="formInput" type="text" name="hobbie" placeholder="Enter hobbie"  value="<%= user.hobbie %>">
+        <div class="textalign">
+        <input class="submit" type="submit" value="update user">
+        </div>
+    </form>
+   </div>
+</body>
+</html>
